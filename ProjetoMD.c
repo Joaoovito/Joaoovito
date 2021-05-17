@@ -46,7 +46,7 @@ int main(){
     p=(int*)calloc(1,sizeof(int));
     Usuario cad;
     int aux=0;
-    printf("FAÇA SEU CADASTRO:");
+    printf("FAÃ‡A SEU CADASTRO:");
     printf("\nDigite seu nome: ");
     fgets(cad.nome,SIZE,stdin);
     fflush(stdin);
@@ -60,15 +60,15 @@ int main(){
     login(&cad);
     if(test!=1){
         system("cls");
-        printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
+        printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
         printf("\n\n\tSair:");
         printf("\n\t[0] ENCERRAR");
-        printf("\n\t[1] VER HISTÓRICO DE CONVERSÕES");
-        printf("\n\tOpção: ");
+        printf("\n\t[1] VER HISTÃ“RICO DE CONVERSÃ•ES");
+        printf("\n\tOpÃ§Ã£o: ");
         scanf("%i",&aux);
         fflush(stdin);
         if(aux==1){
-            printf("\n\t\tHISTÓRICO:");
+            printf("\n\t\tHISTÃ“RICO:");
             for(int i=0;i<TAM-2;i++){
                 printf("\n\t\t%f",p[i]);
             }
@@ -80,10 +80,10 @@ int main(){
     printf("\n========================================================================================================================");
     Sleep(5000);
     printf("\n\n\n\n\n\n\n==================================================== DESENVOLVEDORES ===================================================");
-    printf("\n\n\tAnne Caroline Prodócimo");
+    printf("\n\n\tAnne Caroline ProdÃ³cimo");
     printf("\n\tGabriel Joshua Rodrigues");
     printf("\n\tHugo Vieira Chagas Rabelo");
-    printf("\n\tJoão Vítor Fernandes da Costa");
+    printf("\n\tJoÃ£o VÃ­tor Fernandes da Costa");
     printf("\n\tVitor Arcolini Veine\n\n");
     free(p);
     return 0;
@@ -92,9 +92,9 @@ int main(){
 void login(Usuario *cad){
     int senha=0;
     printf("========================================================================================================================");
-    printf("\a\n==================================== BEM-VINDO AO SOFTWARE DE CONVERSÃO DE UNIDADES ====================================");
+    printf("\a\n==================================== BEM-VINDO AO SOFTWARE DE CONVERSÃƒO DE UNIDADES ====================================");
     printf("\n========================================================================================================================");
-    printf("\nUsuário: %s",cad->nome);
+    printf("\nUsuÃ¡rio: %s",cad->nome);
     printf("Credencial: %i",cad->credencial);
     printf("\nDigite sua senha: ");
     scanf("%i",&senha);
@@ -127,7 +127,7 @@ void leitor(void){
     while ( fscanf(fd,"%f", &i) != EOF){
         linhas++;
         if(linhas>=100){
-            printf("\nARQUIVO MUITO EXTENSO, NÚMERO MÁXIMO DE CONVERSÕES: 100");
+            printf("\nARQUIVO MUITO EXTENSO, NÃšMERO MÃXIMO DE CONVERSÃ•ES: 100");
             Sleep(1000);
             fclose(fd);
             exit(1);
@@ -141,11 +141,11 @@ void leitor(void){
 void menuprincipal1(void){
     int i;
     int resp = 0;
-    printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-    printf("\n\nEscolha o tipo de conversão desejada:\n");
-    printf("\n1) CONVERSÃO PADRÃO");
-    printf("\n2) CONVERSÃO A PARTIR DE ARQUIVO");
-    printf("\n\nOpção: ");
+    printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+    printf("\n\nEscolha o tipo de conversÃ£o desejada:\n");
+    printf("\n1) CONVERSÃƒO PADRÃƒO");
+    printf("\n2) CONVERSÃƒO A PARTIR DE ARQUIVO");
+    printf("\n\nOpÃ§Ã£o: ");
     scanf("%d",&i);
     switch(i){
         case 1:{
@@ -159,7 +159,7 @@ void menuprincipal1(void){
             break;
         }
         default:{
-            printf("\n\tOpção não reconhecida.\n\tTENTE NOVAMENTE!");
+            printf("\n\tOpÃ§Ã£o nÃ£o reconhecida.\n\tTENTE NOVAMENTE!");
             Sleep(4000);
             system("cls");
             menuprincipal1();
@@ -168,20 +168,20 @@ void menuprincipal1(void){
 }
 void menuprincipal2(int i,int j){
     if(test==0){
-        printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-        printf("\n\nCONVERSÃO PADRÃO:");
-        printf("\n\n\tEscolha conversão desejada: \n");
+        printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+        printf("\n\nCONVERSÃƒO PADRÃƒO:");
+        printf("\n\n\tEscolha conversÃ£o desejada: \n");
         printf("\n\t1) COMPRIMENTO");
         printf("\n\t2) MASSA");
         printf("\n\t3) TEMPO");
-        printf("\n\t4) ÁREA");
-        printf("\n\t5) ENERGIA MECÂNICA");
-        printf("\n\t6) PRESSÃO");
+        printf("\n\t4) ÃREA");
+        printf("\n\t5) ENERGIA MECÃ‚NICA");
+        printf("\n\t6) PRESSÃƒO");
         printf("\n\t7) TEMPERATURA");
         printf("\n\t8) VELOCIDADE");
         printf("\n\t9) VOLUME");
-        printf("\n\t10) MÚLTIPLOS");
-        printf("\n\n\tOpção: ");
+        printf("\n\t10) MÃšLTIPLOS");
+        printf("\n\n\tOpÃ§Ã£o: ");
         scanf("%d",&i);
     }
     switch(i){
@@ -236,7 +236,7 @@ void menuprincipal2(int i,int j){
             break;
         }
         default:{
-            printf("\n\tOpção não reconhecida.\n\tTENTE NOVAMENTE!");
+            printf("\n\tOpÃ§Ã£o nÃ£o reconhecida.\n\tTENTE NOVAMENTE!");
             Sleep(4000);
             system("cls");
             menuprincipal2(i,j);
@@ -255,8 +255,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -265,8 +265,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f km --> %.6f in",arquivo[i],(arquivo[i]* 39370.1));
             }
@@ -280,8 +280,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -290,8 +290,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f km --> %.6f yd",arquivo[i],(arquivo[i]* 1093.61));
             }
@@ -305,8 +305,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -315,8 +315,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f km --> %.6f mi",arquivo[i],(arquivo[i]/ 1.609));
             }
@@ -330,8 +330,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -340,8 +340,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f in --> %.6f km",arquivo[i],(arquivo[i] / 39370.1));
             }
@@ -356,8 +356,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -366,8 +366,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f in --> %.6f yd",arquivo[i],(arquivo[i] / 36));
             }
@@ -382,8 +382,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -392,8 +392,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f in --> %.6f mi",arquivo[i],(arquivo[i] / 63360));
             }
@@ -408,8 +408,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -418,8 +418,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f yd --> %.6f km",arquivo[i],(arquivo[i]/ 1093.61));
             }
@@ -434,8 +434,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -444,8 +444,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f yd --> %.6f in",arquivo[i],(arquivo[i]* 36));
             }
@@ -460,8 +460,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -470,8 +470,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f yd --> %.6f mi",arquivo[i],(arquivo[i] / 1760));
             }
@@ -486,8 +486,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -496,8 +496,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f mi --> %.6f km",arquivo[i],(arquivo[i]* 1.609));
             }
@@ -512,8 +512,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -522,8 +522,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f mi --> %.6f in",arquivo[i],(arquivo[i] * 63360));
             }
@@ -538,8 +538,8 @@ void convertcomprimento(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -548,8 +548,8 @@ void convertcomprimento(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE COMPRIMENTO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE COMPRIMENTO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f mi --> %.6f yd",arquivo[i],(arquivo[i]* 1760));
 
@@ -558,7 +558,7 @@ void convertcomprimento(int a,float b,int i){
         }
 
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menucomprimento(0);
@@ -570,10 +570,10 @@ void menucomprimento(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO DE COMPRIMENTO:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO DE COMPRIMENTO:");
             printf("\n\n\tEscolha unidades desejadas: \n");
-            printf("\n\t2) Quilômetros\t[km]");
+            printf("\n\t2) QuilÃ´metros\t[km]");
             printf("\n\t4) Polegadas\t[in]");
             printf("\n\t8) Jardas \t[yd]");
             printf("\n\t16) Milhas\t[mi]");
@@ -588,10 +588,10 @@ void menucomprimento(int j){
             fflush(stdin);
             convertcomprimento(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -614,8 +614,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -624,14 +624,14 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f g --> %.6f lb",arquivo[i],(arquivo[i]*0.0022046));
             }
         break;
         }
-        case -6:{//grama >>onça
+        case -6:{//grama >>onÃ§a
             if(test==0){
                 printf("\n\t%.6f g --> %.6f oz",b,(b / 28.35));
                 p[i]=b / 28.35;
@@ -639,8 +639,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -649,8 +649,8 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f g --> %.6f lb",arquivo[i],(arquivo[i]/ 28.35));
             }
@@ -664,8 +664,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -674,8 +674,8 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f g --> %.6f lb",arquivo[i],(arquivo[i]/14688));
             }
@@ -689,8 +689,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -699,14 +699,14 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f lb --> %.6f g",arquivo[i],(arquivo[i]*454));
             }
         break;
         }
-        case -4:{//libra >>onça
+        case -4:{//libra >>onÃ§a
             if(test==0){
                 printf("\n\t%.6f lb --> %.6f oz",b,(b*16));
                 p[i]=b*16;
@@ -714,8 +714,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -724,8 +724,8 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f lb --> %.6f oz",arquivo[i],(arquivo[i]*16));
             }
@@ -739,8 +739,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -749,14 +749,14 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f lb --> %.6f @",arquivo[i],(arquivo[i]*33.069));
             }
         break;
         }
-        case 6:{//Onça >>Grama
+        case 6:{//OnÃ§a >>Grama
             if(test==0){
                 printf("\n\t%.6f oz --> %.6f g",b,(b*28.35));
                 p[i]=b*28.35;
@@ -764,8 +764,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -774,14 +774,14 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f oz --> %.6f g",arquivo[i],(arquivo[i]*28.35));
             }
         break;
         }
-        case 4:{//Onça >>libra
+        case 4:{//OnÃ§a >>libra
             if(test==0){
                 printf("\n\t%.6f oz --> %.6f lb",b,(b/16));
                 p[i]=b/16;
@@ -789,8 +789,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -799,14 +799,14 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f oz --> %.6f lb",arquivo[i],(arquivo[i]/16));
             }
         break;
         }
-        case -8:{//Onça >> Arroba
+        case -8:{//OnÃ§a >> Arroba
             if(test==0){
                 printf("\n\t%.6f oz --> %.6f @",b,(b/518.139));
                 p[i]=b/518.139;
@@ -814,8 +814,8 @@ void convertmassa(int a,float b,int i){
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -824,8 +824,8 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f oz --> %.6f @",arquivo[i],(arquivo[i]/518.139));
             }
@@ -839,8 +839,8 @@ void convertmassa(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -849,8 +849,8 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f @ --> %.6f g",arquivo[i],(arquivo[i]*14689));
             }
@@ -864,8 +864,8 @@ void convertmassa(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -874,14 +874,14 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f @ --> %.6f lb",arquivo[i],(arquivo[i]*39.3553));
             }
         break;
         }
-        case 8:{//Arroba >> Onça
+        case 8:{//Arroba >> OnÃ§a
             if(test==0){
                 printf("\n\t%.6f @ --> %.6f oz",b,(b *518.139));
                 p[i]=b * 518.139;
@@ -889,8 +889,8 @@ void convertmassa(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -899,15 +899,15 @@ void convertmassa(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE MASSA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE MASSA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f @ --> %.6f oz",arquivo[i],(arquivo[i]*518.139));
             }
         break;
         }
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menumassa(0);
@@ -920,12 +920,12 @@ void menumassa(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO DE MASSA:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO DE MASSA:");
             printf("\n\n\tEscolha unidades desejadas: \n");
             printf("\n\t2) Grama\t[g]");
             printf("\n\t4) Libra\t[lb]");
-            printf("\n\t8) Onça \t[oz]");
+            printf("\n\t8) OnÃ§a \t[oz]");
             printf("\n\t16) Arroba\t[@]");
             printf("\n\n\tUnidade de origem: ");
             scanf("%d",&a);
@@ -938,10 +938,10 @@ void menumassa(int j){
             fflush(stdin);
             convertmassa(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -958,14 +958,14 @@ void converttempo(int a,float b,int i){
     switch(a){
         case -2:{//hora >> decada
             if(test==0){
-                printf("\n\t%.6f h --> %.6f década(s)",b, b / 87600);
+                printf("\n\t%.6f h --> %.6f dÃ©cada(s)",b, b / 87600);
                 p[i]= b / 87600;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -974,10 +974,10 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f h --> %.6f década(s)",arquivo[i],(arquivo[i]*(b / 87600)));
+                    printf("\n\t%.6f h --> %.6f dÃ©cada(s)",arquivo[i],(arquivo[i]*(b / 87600)));
             }
             break;
         }
@@ -989,8 +989,8 @@ void converttempo(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -999,8 +999,8 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f h --> %.6f dia(s)",arquivo[i],(arquivo[i] / 24));
 
@@ -1009,14 +1009,14 @@ void converttempo(int a,float b,int i){
         }
         case -14:{//hora>>seculo
             if(test==0){
-                printf("\n\t%.6f h --> %.6f século(s)",b, b / 876000);
+                printf("\n\t%.6f h --> %.6f sÃ©culo(s)",b, b / 876000);
                 p[i]= b / 876000;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1025,23 +1025,23 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f h --> %.6f século(s)",arquivo[i],(arquivo[i] / 876000));
+                    printf("\n\t%.6f h --> %.6f sÃ©culo(s)",arquivo[i],(arquivo[i] / 876000));
             }
             break;
         }
         case 2:{//decada>> hora
             if(test==0){
-                printf("\n\t%.6f década(s) --> %.6f h",b, b * 876000);
+                printf("\n\t%.6f dÃ©cada(s) --> %.6f h",b, b * 876000);
                 p[i]= b * 876000;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1050,23 +1050,23 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f década(s) --> %.6f h",arquivo[i],(arquivo[i] * 876000));
+                    printf("\n\t%.6f dÃ©cada(s) --> %.6f h",arquivo[i],(arquivo[i] * 876000));
             }
             break;
         }
         case -4:{//decada>>dia
             if(test==0){
-                printf("\n\t%.6f década(s) --> %.6f dia(s)",b, b * 3650);
+                printf("\n\t%.6f dÃ©cada(s) --> %.6f dia(s)",b, b * 3650);
                 p[i]= b * 3650;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1075,23 +1075,23 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f década(s) --> %.6f dia(s)",arquivo[i],(arquivo[i] * 3650));
+                    printf("\n\t%.6f dÃ©cada(s) --> %.6f dia(s)",arquivo[i],(arquivo[i] * 3650));
             }
             break;
         }
         case -12:{//decada>>seculo
             if(test==0){
-                printf("\n\t%.6f década(s) --> %.6f século(s)",b, b / 10);
+                printf("\n\t%.6f dÃ©cada(s) --> %.6f sÃ©culo(s)",b, b / 10);
                 p[i]= b / 10;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1100,10 +1100,10 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f década(s) --> %.6f século(s)",arquivo[i],(arquivo[i] / 10));
+                    printf("\n\t%.6f dÃ©cada(s) --> %.6f sÃ©culo(s)",arquivo[i],(arquivo[i] / 10));
             }
             break;
         }
@@ -1115,8 +1115,8 @@ void converttempo(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1125,8 +1125,8 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f dia(s) --> %.6f h",arquivo[i],(arquivo[i]* 24));
             }
@@ -1134,14 +1134,14 @@ void converttempo(int a,float b,int i){
         }
         case 4:{//dia>>decada
             if(test==0){
-                printf("\n\t%.6f dia(s) --> %.6f década(s)",b, b / 3650);
+                printf("\n\t%.6f dia(s) --> %.6f dÃ©cada(s)",b, b / 3650);
                 p[i]= b / 3650;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1150,23 +1150,23 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f dia(s) --> %.6f década(s)",arquivo[i],(arquivo[i] / 3650));
+                    printf("\n\t%.6f dia(s) --> %.6f dÃ©cada(s)",arquivo[i],(arquivo[i] / 3650));
             }
             break;
         }
         case -8:{//dia>>seculo
             if(test==0){
-                printf("\n\t%.6f dia(s) --> %.6f século(s)",b, b / 36500);
+                printf("\n\t%.6f dia(s) --> %.6f sÃ©culo(s)",b, b / 36500);
                 p[i]= b / 36500;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1175,23 +1175,23 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f dia(s) --> %.6f século(s)",arquivo[i],(arquivo[i] / 36500));
+                    printf("\n\t%.6f dia(s) --> %.6f sÃ©culo(s)",arquivo[i],(arquivo[i] / 36500));
             }
             break;
         }
         case 14:{//seculo>>hora
             if(test==0){
-                printf("\n\t%.6f século(s) --> %.6f h",b, b * 876000);
+                printf("\n\t%.6f sÃ©culo(s) --> %.6f h",b, b * 876000);
                 p[i]= b * 876000;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1201,24 +1201,24 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f século(s) --> %.6f h",arquivo[i],(arquivo[i] * 876000));
+                    printf("\n\t%.6f sÃ©culo(s) --> %.6f h",arquivo[i],(arquivo[i] * 876000));
             }
             break;
         }
 
         case 12:{//seculo>>decada
              if(test==0){
-                printf("\n\t%.6f século(s) --> %.6f década(s)",b, b * 10);
+                printf("\n\t%.6f sÃ©culo(s) --> %.6f dÃ©cada(s)",b, b * 10);
                 p[i]= b * 10;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1227,23 +1227,23 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f século(s) --> %.6f década(s)",arquivo[i],(arquivo[i] * 10));
+                    printf("\n\t%.6f sÃ©culo(s) --> %.6f dÃ©cada(s)",arquivo[i],(arquivo[i] * 10));
             }
             break;
         }
         case 8:{ //seculo>>dia
             if(test==0){
-                printf("\n\t%.6f século(s) --> %.6f dia(s)",b, b * 36500);
+                printf("\n\t%.6f sÃ©culo(s) --> %.6f dia(s)",b, b * 36500);
                 p[i]= b * 36500;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1252,15 +1252,15 @@ void converttempo(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f século(s) --> %.6f dia(s)",arquivo[i],(arquivo[i]* 36500));
+                    printf("\n\t%.6f sÃ©culo(s) --> %.6f dia(s)",arquivo[i],(arquivo[i]* 36500));
             }
             break;
         }
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menutempo(0);
@@ -1272,13 +1272,13 @@ void menutempo(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO DE TEMPO:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO DE TEMPO:");
             printf("\n\n\tEscolha unidades desejadas: \n");
             printf("\n\t2) Horas\t[h]");
-            printf("\n\t4) Décadas\t");
+            printf("\n\t4) DÃ©cadas\t");
             printf("\n\t8) Dias \t");
-            printf("\n\t16) Séculos\t");
+            printf("\n\t16) SÃ©culos\t");
             printf("\n\n\tUnidade de origem: ");
             scanf("%d",&a);
             fflush(stdin);
@@ -1290,10 +1290,10 @@ void menutempo(int j){
             fflush(stdin);
             converttempo(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -1310,14 +1310,14 @@ void convertarea(int a,float b,int i){
     switch(a){
         case -2:{//m^2 >> hc
             if(test==0){
-                printf("\n\t%.6f m² --> %.6f ha",b,(b / 10000));
+                printf("\n\t%.6f mÂ² --> %.6f ha",b,(b / 10000));
                 p[i]=b / 10000;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1326,23 +1326,23 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f m² --> %.6f ha",arquivo[i],(arquivo[i] / 10000));
+                    printf("\n\t%.6f mÂ² --> %.6f ha",arquivo[i],(arquivo[i] / 10000));
             }
             break;
         }
         case -6:{// m^2 >> acre
             if(test==0){
-                printf("\n\t%.6f m² --> %.6f acre(s)",b,(b / 4047));
+                printf("\n\t%.6f mÂ² --> %.6f acre(s)",b,(b / 4047));
                 p[i]=b / 4047;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1351,23 +1351,23 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f m² --> %.6f acre(s)",arquivo[i],(arquivo[i]/ 4047));
+                    printf("\n\t%.6f mÂ² --> %.6f acre(s)",arquivo[i],(arquivo[i]/ 4047));
             }
             break;
         }
         case -14:{// m^2 >> pol^2
             if(test==0){
-                printf("\n\t%.6f m² --> %.6f in²",b,(b * 1550));
+                printf("\n\t%.6f mÂ² --> %.6f inÂ²",b,(b * 1550));
                 p[i]=b * 1550;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1376,23 +1376,23 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f m² --> %.6f in²",arquivo[i],(arquivo[i]* 1550));
+                    printf("\n\t%.6f mÂ² --> %.6f inÂ²",arquivo[i],(arquivo[i]* 1550));
             }
             break;
         }
         case 2:{//hc >> m^2
             if(test==0){
-                printf("\n\t%.6f ha --> %.6f m²",b,(b * 10000));
+                printf("\n\t%.6f ha --> %.6f mÂ²",b,(b * 10000));
                 p[i]=b * 10000;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1401,10 +1401,10 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ha --> %.6f m²",arquivo[i],(arquivo[i]* 10000));
+                    printf("\n\t%.6f ha --> %.6f mÂ²",arquivo[i],(arquivo[i]* 10000));
             }
             break;
         }
@@ -1416,8 +1416,8 @@ void convertarea(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1426,8 +1426,8 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f ha --> %.6f acre(s)",arquivo[i],(arquivo[i]* 2.471));
             }
@@ -1435,14 +1435,14 @@ void convertarea(int a,float b,int i){
         }
         case -12:{// hec >> pol^2
             if(test==0){
-                printf("\n\t%.6f ha --> %.6f in²",b,(b * 0.000000155));
+                printf("\n\t%.6f ha --> %.6f inÂ²",b,(b * 0.000000155));
                 p[i]=b * 0.000000155;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1451,23 +1451,23 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ha --> %.6f in²",arquivo[i],(arquivo[i]* 0.000000155));
+                    printf("\n\t%.6f ha --> %.6f inÂ²",arquivo[i],(arquivo[i]* 0.000000155));
             }
             break;
         }
         case 6:{// acre >> m^2
             if(test==0){
-                printf("\n\t%.6f acre(s) --> %.6f m²",b,(b * 4047));
+                printf("\n\t%.6f acre(s) --> %.6f mÂ²",b,(b * 4047));
                 p[i]=b * 4047;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1476,10 +1476,10 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f acre(s) --> %.6f m²",arquivo[i],(arquivo[i]* 4047));
+                    printf("\n\t%.6f acre(s) --> %.6f mÂ²",arquivo[i],(arquivo[i]* 4047));
             }
             break;
         }
@@ -1491,8 +1491,8 @@ void convertarea(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1501,8 +1501,8 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f acre(s) --> %.6f ha",arquivo[i],(arquivo[i]/ 2.471));
             }
@@ -1510,14 +1510,14 @@ void convertarea(int a,float b,int i){
         }
         case -8:{// acre >> pol^2
             if(test==0){
-                printf("\n\t%.6f acre(s) --> %.6f in²",b,(b * 0.00000627));
+                printf("\n\t%.6f acre(s) --> %.6f inÂ²",b,(b * 0.00000627));
                 p[i]=b * 0.00000627;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1526,23 +1526,23 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f acre(s) --> %.6f in²",arquivo[i],(arquivo[i]* 0.00000627));
+                    printf("\n\t%.6f acre(s) --> %.6f inÂ²",arquivo[i],(arquivo[i]* 0.00000627));
             }
             break;
         }
         case 14:{// pol^2 >> m^2
             if(test==0){
-                printf("\n\t%.6f in² --> %.6f m²",b,(b / 1550));
+                printf("\n\t%.6f inÂ² --> %.6f mÂ²",b,(b / 1550));
                 p[i]=b / 1550;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1551,23 +1551,23 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f in² --> %.6f m²",arquivo[i],(arquivo[i]/ 1550));
+                    printf("\n\t%.6f inÂ² --> %.6f mÂ²",arquivo[i],(arquivo[i]/ 1550));
             }
             break;
         }
         case 12:{// pol^2 >> hc
             if(test==0){
-                printf("\n\t%.6f in² --> %.6f ha",b,(b / 0.000000155));
+                printf("\n\t%.6f inÂ² --> %.6f ha",b,(b / 0.000000155));
                 p[i]=b / 0.000000155;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1576,23 +1576,23 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f in² --> %.6f ha",arquivo[i],(arquivo[i]/ 0.000000155));
+                    printf("\n\t%.6f inÂ² --> %.6f ha",arquivo[i],(arquivo[i]/ 0.000000155));
             }
             break;
         }
         case 8:{// pol^2 >> acre
             if(test==0){
-                printf("\n\t%.6f in² --> %.6f acre(s)",b,(b / 0.00000627));
+                printf("\n\t%.6f inÂ² --> %.6f acre(s)",b,(b / 0.00000627));
                 p[i]=b / 0.00000627;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1601,15 +1601,15 @@ void convertarea(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f in² --> %.6f acre(s)",arquivo[i],(arquivo[i] / 0.00000627));
+                    printf("\n\t%.6f inÂ² --> %.6f acre(s)",arquivo[i],(arquivo[i] / 0.00000627));
             }
             break;
         }
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menuarea(0);
@@ -1621,13 +1621,13 @@ void menuarea(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO PARA ÁREA:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO PARA ÃREA:");
             printf("\n\n\tEscolha unidades desejadas: \n");
-            printf("\n\t2) Metros quadrados\t[m²]");
+            printf("\n\t2) Metros quadrados\t[mÂ²]");
             printf("\n\t4) Hectares\t\t[ha]");
             printf("\n\t8) Acres\t");
-            printf("\n\t16) Polegadas quadradas\t[in²]");
+            printf("\n\t16) Polegadas quadradas\t[inÂ²]");
             printf("\n\n\tUnidade de origem: ");
             scanf("%d",&a);
             fflush(stdin);
@@ -1639,10 +1639,10 @@ void menuarea(int j){
             fflush(stdin);
             convertarea(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -1665,8 +1665,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1675,8 +1675,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f J --> %.6f kcal",arquivo[i],(arquivo[i]/4184));
             }
@@ -1690,8 +1690,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1700,14 +1700,14 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f J --> %.6f Wh",arquivo[i],(arquivo[i]/3600));
             }
             break;
         }
-        case -14:{//joule>>pé libra força
+        case -14:{//joule>>pÃ© libra forÃ§a
             if(test==0){
                 printf("\n\t%.6f J --> %.6f ftlbf",b,(b/1356));
                 p[i]=(b/1356);
@@ -1715,8 +1715,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1725,8 +1725,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f J --> %.6f ftlbf",arquivo[i],(arquivo[i]/1356));
             }
@@ -1740,8 +1740,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1750,8 +1750,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f kcal --> %.6f J",arquivo[i],(arquivo[i]*4.184));
             }
@@ -1765,8 +1765,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1775,8 +1775,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f kcal --> %.6f Wh",arquivo[i],(arquivo[i]*1.162));
             }
@@ -1790,8 +1790,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1800,8 +1800,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f kcal --> %.6f ftlbf",arquivo[i],(arquivo[i]*3086));
             }
@@ -1815,8 +1815,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1825,8 +1825,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Wh --> %.6f J",arquivo[i],(arquivo[i]*3600));
             }
@@ -1840,8 +1840,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1850,8 +1850,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Wh --> %.6f kcal",arquivo[i],(arquivo[i]/1.162));
             }
@@ -1865,8 +1865,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1875,8 +1875,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Wh --> %.6f ftlbf",arquivo[i],(arquivo[i]*2655));
             }
@@ -1890,8 +1890,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1900,8 +1900,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f ftlbf --> %.6f J",arquivo[i],(arquivo[i]*1356));
             }
@@ -1915,8 +1915,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1925,8 +1925,8 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f ftlbf --> %.6f kcal",arquivo[i],(arquivo[i]/3086));
             }
@@ -1940,8 +1940,8 @@ void convertenergiamecanica(int a, float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -1950,15 +1950,15 @@ void convertenergiamecanica(int a, float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f ftlbf --> %.6f Wh",arquivo[i],(arquivo[i]/2655));
             }
             break;
         }
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menuenergiamecanica(0);
@@ -1970,13 +1970,13 @@ void menuenergiamecanica(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO PARA ENERGIA MECÂNICA:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO PARA ENERGIA MECÃ‚NICA:");
             printf("\n\n\tEscolha unidades desejadas: \n");
             printf("\n\t2) Joules\t\t[J]");
             printf("\n\t4) Quilocalorias\t[kcal]");
             printf("\n\t8) Watts-hora\t\t[Wh]");
-            printf("\n\t16) Pé-libra força\t[ftlbf]");
+            printf("\n\t16) PÃ©-libra forÃ§a\t[ftlbf]");
             printf("\n\n\tUnidade de origem: ");
             scanf("%d",&a);
             fflush(stdin);
@@ -1988,10 +1988,10 @@ void menuenergiamecanica(int j){
             fflush(stdin);
             convertenergiamecanica(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -2014,8 +2014,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2024,8 +2024,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Pa --> %.6f bar",arquivo[i],(arquivo[i]/ 100000));
             }
@@ -2039,8 +2039,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2049,8 +2049,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Pa --> %.6f psi",arquivo[i],(arquivo[i]/ 6895));
             }
@@ -2064,8 +2064,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2074,8 +2074,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Pa --> %.6f Torr",arquivo[i],(arquivo[i] / 133));
             }
@@ -2089,8 +2089,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2099,8 +2099,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f bar --> %.6f Pa",arquivo[i],(arquivo[i]* 100000));
             }
@@ -2114,8 +2114,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2124,8 +2124,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f bar --> %.6f psi",arquivo[i],(arquivo[i]* 14.504));
             }
@@ -2139,8 +2139,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2149,8 +2149,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f bar --> %.6f Torr",arquivo[i],(arquivo[i]* 750));
             }
@@ -2164,8 +2164,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2174,8 +2174,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f psi --> %.6f Pa",arquivo[i],(arquivo[i]* 6895));
             }
@@ -2189,8 +2189,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2199,8 +2199,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f psi --> %.6f bar",arquivo[i],(arquivo[i] / 14.504));
             }
@@ -2214,8 +2214,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2224,8 +2224,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f psi --> %.6f Torr",arquivo[i],(arquivo[i]* 51.715));
             }
@@ -2239,8 +2239,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2249,8 +2249,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Torr --> %.6f Pa",arquivo[i],(arquivo[i]* 133));
             }
@@ -2264,8 +2264,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2274,8 +2274,8 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Torr --> %.6f bar",arquivo[i],(arquivo[i]/ 750));
             }
@@ -2289,8 +2289,8 @@ void convertpressao(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2299,15 +2299,15 @@ void convertpressao(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Torr --> %.6f psi",arquivo[i],(arquivo[i]/ 51.715));
             }
             break;
         }
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menupressao(0);
@@ -2319,12 +2319,12 @@ void menupressao(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO PARA PRESSÃO:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO PARA PRESSÃƒO:");
             printf("\n\n\tEscolha unidades desejadas: \n");
             printf("\n\t2) Pascal\t\t\t\t[Pa]");
             printf("\n\t4) Bar\t\t\t\t\t[bar]");
-            printf("\n\t8) Libra força por polegada quadrada \t[psi]");
+            printf("\n\t8) Libra forÃ§a por polegada quadrada \t[psi]");
             printf("\n\t16) Torr\t\t\t\t[Torr]");
             printf("\n\n\tUnidade de origem: ");
             scanf("%d",&a);
@@ -2337,10 +2337,10 @@ void menupressao(int j){
             fflush(stdin);
             convertpressao(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -2357,14 +2357,14 @@ void converttemperatura(int a,float b,int i){
     switch(a){
         case -2:{//C >> F
             if(test==0){
-                printf("\n\t%.6f ºC --> %.6f ºF",b,((b * 1.8)+32));
+                printf("\n\t%.6f ÂºC --> %.6f ÂºF",b,((b * 1.8)+32));
                 p[i]= (b * 1.8)+32;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2373,23 +2373,23 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ºC --> %.6f ºF",arquivo[i],(arquivo[i] * 1.8)+32);
+                    printf("\n\t%.6f ÂºC --> %.6f ÂºF",arquivo[i],(arquivo[i] * 1.8)+32);
             }
             break;
         }
         case -6:{// C >> K
             if(test==0){
-                printf("\n\t%.6f ºC --> %.6f K",b, b + 273.15);
+                printf("\n\t%.6f ÂºC --> %.6f K",b, b + 273.15);
                 p[i]= b + 273.15;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2398,23 +2398,23 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ºC --> %.6f K",arquivo[i],(arquivo[i] + 273.15));
+                    printf("\n\t%.6f ÂºC --> %.6f K",arquivo[i],(arquivo[i] + 273.15));
             }
             break;
         }
         case -14:{// C >> Rankine
             if(test==0){
-                printf("\n\t%.6f ºC --> %.6f Ra",b, (b * 1.8) + 32 + 459.67);
+                printf("\n\t%.6f ÂºC --> %.6f Ra",b, (b * 1.8) + 32 + 459.67);
                 p[i]= (b * 1.8) + 32 + 459.67;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2423,23 +2423,23 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ºC --> %.6f Ra",arquivo[i],(arquivo[i] * 1.8) + 32 + 459.67);
+                    printf("\n\t%.6f ÂºC --> %.6f Ra",arquivo[i],(arquivo[i] * 1.8) + 32 + 459.67);
             }
             break;
         }
         case 2:{//F >> C
             if(test==0){
-                printf("\n\t%.6f ºF --> %.6f ºC",b, (b - 32) / 1.8);
+                printf("\n\t%.6f ÂºF --> %.6f ÂºC",b, (b - 32) / 1.8);
                 p[i]= (b - 32) / 1.8;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2448,23 +2448,23 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ºF --> %.6f ºC",arquivo[i],((arquivo[i]- 32) / 1.8));
+                    printf("\n\t%.6f ÂºF --> %.6f ÂºC",arquivo[i],((arquivo[i]- 32) / 1.8));
             }
             break;
         }
         case -4:{// F >> K
             if(test==0){
-                printf("\n\t%.6f ºF --> %.6f K",b, (b + 459.67) / 1.8);
+                printf("\n\t%.6f ÂºF --> %.6f K",b, (b + 459.67) / 1.8);
                 p[i]= (b + 459.67) / 1.8;
                 i++;
                 do{
                     printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2473,23 +2473,23 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ºF --> %.6f K",arquivo[i],(arquivo[i] + 459.67) / 1.8);
+                    printf("\n\t%.6f ÂºF --> %.6f K",arquivo[i],(arquivo[i] + 459.67) / 1.8);
             }
             break;
         }
         case -12:{// F >> Rankine
             if(test==0){
-                printf("\n\t%.6f ºF --> %.6f Ra",b,b + 459.67);
+                printf("\n\t%.6f ÂºF --> %.6f Ra",b,b + 459.67);
                 p[i]= b + 459.67;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2498,23 +2498,23 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ºF --> %.6f Ra",arquivo[i],(arquivo[i] + 459.67));
+                    printf("\n\t%.6f ÂºF --> %.6f Ra",arquivo[i],(arquivo[i] + 459.67));
             }
             break;
         }
         case 6:{// K >> C
             if(test==0){
-                printf("\n\t%.6f K --> %.6f ºC",b,(b - 273.15));
+                printf("\n\t%.6f K --> %.6f ÂºC",b,(b - 273.15));
                 p[i]= b - 273.15;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2523,24 +2523,24 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f K --> %.6f ºC",arquivo[i],(arquivo[i] - 273.15));
+                    printf("\n\t%.6f K --> %.6f ÂºC",arquivo[i],(arquivo[i] - 273.15));
             }
             break;
         }
 
         case 4:{// k >> F
             if(test==0){
-                printf("\n\t%.6f K --> %.6f ºF",b, (b * 1.8) - 459.67);
+                printf("\n\t%.6f K --> %.6f ÂºF",b, (b * 1.8) - 459.67);
                 p[i]= (b * 1.8) - 459.67;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2549,10 +2549,10 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f K --> %.6f ºF",arquivo[i],(arquivo[i] * 1.8) - 459.67);
+                    printf("\n\t%.6f K --> %.6f ÂºF",arquivo[i],(arquivo[i] * 1.8) - 459.67);
             }
             break;
         }
@@ -2565,8 +2565,8 @@ void converttemperatura(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2575,8 +2575,8 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f K --> %.6f Ra",arquivo[i],(arquivo[i] * 1.8));
             }
@@ -2585,14 +2585,14 @@ void converttemperatura(int a,float b,int i){
 
         case 14:{// Rankine >> C
             if(test==0){
-                printf("\n\t%.6f Ra --> %.6f ºC",b, (b - 32 - 459.67) / 1.8);
+                printf("\n\t%.6f Ra --> %.6f ÂºC",b, (b - 32 - 459.67) / 1.8);
                 p[i]= (b - 32 - 459.67) / 1.8;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2601,24 +2601,24 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f Ra --> %.6f ºC",arquivo[i],(arquivo[i]*(b - 32 - 459.67) / 1.8));
+                    printf("\n\t%.6f Ra --> %.6f ÂºC",arquivo[i],(arquivo[i]*(b - 32 - 459.67) / 1.8));
             }
             break;
         }
 
         case 12:{ // Rankine >> F
             if(test==0){
-                printf("\n\t%.6f Ra --> %.6f ºF",b, b - 459.67);
+                printf("\n\t%.6f Ra --> %.6f ÂºF",b, b - 459.67);
                 p[i]= b - 459.67;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2627,10 +2627,10 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f Ra --> %.6f ºF",arquivo[i],(arquivo[i]*(b - 459.67)));
+                    printf("\n\t%.6f Ra --> %.6f ÂºF",arquivo[i],(arquivo[i]*(b - 459.67)));
             }
             break;
         }
@@ -2643,8 +2643,8 @@ void converttemperatura(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2653,8 +2653,8 @@ void converttemperatura(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPERATURA POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPERATURA POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f Ra --> %.6f K",arquivo[i],(arquivo[i] / 1.8));
             }
@@ -2662,7 +2662,7 @@ void converttemperatura(int a,float b,int i){
         }
 
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menutemperatura(0);
@@ -2674,11 +2674,11 @@ void menutemperatura(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO DE TEMPERATURA:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO DE TEMPERATURA:");
             printf("\n\n\tEscolha unidades desejadas: \n");
-            printf("\n\t2) Celsius\t[ºC]");
-            printf("\n\t4) Fahrenheit\t[ºF]");
+            printf("\n\t2) Celsius\t[ÂºC]");
+            printf("\n\t4) Fahrenheit\t[ÂºF]");
             printf("\n\t8) Kelvin \t[K]");
             printf("\n\t16) Rankine\t[Ra]");
             printf("\n\n\tUnidade de origem: ");
@@ -2692,10 +2692,10 @@ void menutemperatura(int j){
             fflush(stdin);
             converttemperatura(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -2718,8 +2718,8 @@ void convertvelocidade(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2728,8 +2728,8 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f m/s --> %.6f ft/s",arquivo[i],(arquivo[i]* 3.28084));
             }
@@ -2743,8 +2743,8 @@ void convertvelocidade(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2753,23 +2753,23 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f m/s --> %.6f mph",arquivo[i],(arquivo[i]*2.23694));
             }
             break;
         }
-        case -14:{//Metro por segundo>>Nó
+        case -14:{//Metro por segundo>>NÃ³
             if(test==0){
-                printf("\n\t%.6f m/s --> %.6f nós",b,(b * 1.943846));
+                printf("\n\t%.6f m/s --> %.6f nÃ³s",b,(b * 1.943846));
                 p[i]=b * 1.943846;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2778,10 +2778,10 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f m/s --> %.6f nós",arquivo[i],(arquivo[i]* 1.943846));
+                    printf("\n\t%.6f m/s --> %.6f nÃ³s",arquivo[i],(arquivo[i]* 1.943846));
             }
             break;
         }
@@ -2793,8 +2793,8 @@ void convertvelocidade(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2803,8 +2803,8 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f ft/s --> %.6f m/s",arquivo[i],(arquivo[i]/ 3.28084));
             }
@@ -2818,8 +2818,8 @@ void convertvelocidade(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2828,23 +2828,23 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f ft/s --> %.6f mph",arquivo[i],(arquivo[i]/ 1.467));
             }
             break;
         }
-        case -12:{//ft por segundo>>nós
+        case -12:{//ft por segundo>>nÃ³s
             if(test==0){
-                printf("\n\t%.6f ft/s --> %.6f nós",b,(b / 1.688));
+                printf("\n\t%.6f ft/s --> %.6f nÃ³s",b,(b / 1.688));
                 p[i]=b / 1.688;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2853,10 +2853,10 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ft/s --> %.6f nós",arquivo[i],(arquivo[i]/ 1.688));
+                    printf("\n\t%.6f ft/s --> %.6f nÃ³s",arquivo[i],(arquivo[i]/ 1.688));
             }
             break;
         }
@@ -2868,8 +2868,8 @@ void convertvelocidade(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2878,8 +2878,8 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f mph --> %.6f m/s",arquivo[i],(arquivo[i]/ 2.237));
             }
@@ -2893,8 +2893,8 @@ void convertvelocidade(int a,float b,int i){
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2903,23 +2903,23 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
                     printf("\n\t%.6f mph --> %.6f ft/s",arquivo[i],(arquivo[i]* 1.467));
             }
             break;
         }
-        case -8:{//milhas por hora>>Nós
+        case -8:{//milhas por hora>>NÃ³s
             if(test==0){
-                printf("\n\t%.6f mph --> %.6f nós",b,(b / 1.151));
+                printf("\n\t%.6f mph --> %.6f nÃ³s",b,(b / 1.151));
                 p[i]=b / 1.151;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2928,23 +2928,23 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f mph --> %.6f nós",arquivo[i],(arquivo[i]/ 1.151));
+                    printf("\n\t%.6f mph --> %.6f nÃ³s",arquivo[i],(arquivo[i]/ 1.151));
             }
             break;
         }
-        case 14:{//Nós>>metro por segundo
+        case 14:{//NÃ³s>>metro por segundo
             if(test==0){
-                printf("\n\t%.6f nós --> %.6f m/s",b,(b / 1.944));
+                printf("\n\t%.6f nÃ³s --> %.6f m/s",b,(b / 1.944));
                 p[i]=b*32.38;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2953,23 +2953,23 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f nós --> %.6f m/s",arquivo[i],(arquivo[i]/ 1.944));
+                    printf("\n\t%.6f nÃ³s --> %.6f m/s",arquivo[i],(arquivo[i]/ 1.944));
             }
             break;
         }
-        case 12:{//Nós>>ft por segundo
+        case 12:{//NÃ³s>>ft por segundo
             if(test==0){
-                printf("\n\t%.6f nós --> %.6f ft/s",b,(b * 1.688));
+                printf("\n\t%.6f nÃ³s --> %.6f ft/s",b,(b * 1.688));
                 p[i]=b * 1.688;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -2978,23 +2978,23 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f nós --> %.6f ft/s",arquivo[i],(arquivo[i]*1.688));
+                    printf("\n\t%.6f nÃ³s --> %.6f ft/s",arquivo[i],(arquivo[i]*1.688));
             }
             break;
         }
-        case 8:{//Nós>>Milhas por hora
+        case 8:{//NÃ³s>>Milhas por hora
             if(test==0){
-                printf("\n\t%.6f nós --> %.6f mph",b,(b * 1.151));
+                printf("\n\t%.6f nÃ³s --> %.6f mph",b,(b * 1.151));
                 p[i]=(b * 1.151);
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -3004,15 +3004,15 @@ void convertvelocidade(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE VELOCIDADE POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE VELOCIDADE POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f nós --> %.6f mph",arquivo[i],(arquivo[i]* 1.151));
+                    printf("\n\t%.6f nÃ³s --> %.6f mph",arquivo[i],(arquivo[i]* 1.151));
             }
             break;
         }
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menuvelocidade(0);
@@ -3024,13 +3024,13 @@ void menuvelocidade(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO DE VELOCIDADE:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO DE VELOCIDADE:");
             printf("\n\n\tEscolha unidades desejadas: \n");
             printf("\n\t2) Metros por segundo\t[m/s]");
-            printf("\n\t4) Pés por segundo\t[ft/s]");
+            printf("\n\t4) PÃ©s por segundo\t[ft/s]");
             printf("\n\t8) Milhas por hora \t[mph]");
-            printf("\n\t16) Nós\t");
+            printf("\n\t16) NÃ³s\t");
             printf("\n\n\tUnidade de origem: ");
             scanf("%d",&a);
             fflush(stdin);
@@ -3042,10 +3042,10 @@ void menuvelocidade(int j){
             fflush(stdin);
             convertvelocidade(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -3062,14 +3062,14 @@ void convertvolume(int a,float b,int i){
     switch(a){
         case -2:{//g >> m^3
             if(test==0){
-                printf("\n\t%.6f gal --> %.6f m³",b,(b / 264));
+                printf("\n\t%.6f gal --> %.6f mÂ³",b,(b / 264));
                 p[i]=b / 264;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -3078,23 +3078,23 @@ void convertvolume(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f gal --> %.6f m³",arquivo[i],(arquivo[i]/ 264));
+                    printf("\n\t%.6f gal --> %.6f mÂ³",arquivo[i],(arquivo[i]/ 264));
             }
             break;
         }
         case -6:{//g>>ft^3
             if(test==0){
-                printf("\n\t%.6f gal --> %.6f ft³",b,(b * 231));
+                printf("\n\t%.6f gal --> %.6f ftÂ³",b,(b * 231));
                 p[i]=b * 231;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -3103,23 +3103,23 @@ void convertvolume(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f gal --> %.6f ft³",arquivo[i],(arquivo[i]* 231));
+                    printf("\n\t%.6f gal --> %.6f ftÂ³",arquivo[i],(arquivo[i]* 231));
             }
             break;
         }
         case 2:{//m^3>> g
             if(test==0){
-                printf("\n\t%.6f m³ --> %.6f gal",b,(b * 264.172));
+                printf("\n\t%.6f mÂ³ --> %.6f gal",b,(b * 264.172));
                 p[i]=b * 264.172;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -3128,23 +3128,23 @@ void convertvolume(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f m³ --> %.6f gal",arquivo[i],(arquivo[i]* 264.172));
+                    printf("\n\t%.6f mÂ³ --> %.6f gal",arquivo[i],(arquivo[i]* 264.172));
             }
             break;
         }
         case -4:{//m^3>>ft^3
             if(test==0){
-                printf("\n\t%.6f m³ --> %.6f ft³",b,(b * 61023.7));
+                printf("\n\t%.6f mÂ³ --> %.6f ftÂ³",b,(b * 61023.7));
                 p[i]=b * 61023.7;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -3153,23 +3153,23 @@ void convertvolume(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f m³ --> %.6f ft³",arquivo[i],(arquivo[i]* 61023.7));
+                    printf("\n\t%.6f mÂ³ --> %.6f ftÂ³",arquivo[i],(arquivo[i]* 61023.7));
             }
             break;
         }
         case 6:{//ft^3>>g
             if(test==0){
-                printf("\n\t%.6f ft³ --> %.6f gal",b,(b / 231));
+                printf("\n\t%.6f ftÂ³ --> %.6f gal",b,(b / 231));
                 p[i]=b / 231;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -3178,23 +3178,23 @@ void convertvolume(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ft³ --> %.6f gal³",arquivo[i],(arquivo[i]/ 231));
+                    printf("\n\t%.6f ftÂ³ --> %.6f galÂ³",arquivo[i],(arquivo[i]/ 231));
             }
             break;
         }
         case 4:{//ft^3>>m^3
             if(test==0){
-                printf("\n\t%.6f ft³ --> %.6f m³",b,(b / 61023.7));
+                printf("\n\t%.6f ftÂ³ --> %.6f mÂ³",b,(b / 61023.7));
                 p[i]=b / 61023.7;
                 i++;
                 do{
               	    printf("\n\n\tDeseja salvar?");
                     printf("\n\t1) Sim");
-                    printf("\n\t2) Não");
-                    printf("\n\tOpção: ");
+                    printf("\n\t2) NÃ£o");
+                    printf("\n\tOpÃ§Ã£o: ");
                     scanf("%d",&aux);
                     fflush(stdin);
                 }while (aux>2 || aux<1);
@@ -3203,15 +3203,15 @@ void convertvolume(int a,float b,int i){
                 }
             }
             else{
-                printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-                printf("\n\nCONVERSÃO DE TEMPO POR ARQUIVO:\n");
+                printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+                printf("\n\nCONVERSÃƒO DE TEMPO POR ARQUIVO:\n");
                 for(i=3;i<linhas;i++)
-                    printf("\n\t%.6f ft³ --> %.6f m³",arquivo[i],(arquivo[i]/ 61023.7));
+                    printf("\n\t%.6f ftÂ³ --> %.6f mÂ³",arquivo[i],(arquivo[i]/ 61023.7));
             }
             break;
         }
         default:
-            printf("\n\tCONVERSÃO NÃO RECONHECIDA");
+            printf("\n\tCONVERSÃƒO NÃƒO RECONHECIDA");
             Sleep(4000);
             system("cls");
             menuvolume(0);
@@ -3223,12 +3223,12 @@ void menuvolume(int j){
     if(test==0){
         while(d!=0){
             d=0;
-            printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-            printf("\n\nCONVERSÃO PADRÃO PARA VOLUME:");
+            printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+            printf("\n\nCONVERSÃƒO PADRÃƒO PARA VOLUME:");
             printf("\n\n\tEscolha unidades desejadas: \n");
-            printf("\n\t2) Galões americanos\t[gal]");
-            printf("\n\t4) Metros cúbicos\t[m³]");
-            printf("\n\t8) Pés cúbicos\t\t[ft³]");
+            printf("\n\t2) GalÃµes americanos\t[gal]");
+            printf("\n\t4) Metros cÃºbicos\t[mÂ³]");
+            printf("\n\t8) PÃ©s cÃºbicos\t\t[ftÂ³]");
             printf("\n\n\tUnidade de origem: ");
             scanf("%d",&a);
             fflush(stdin);
@@ -3240,10 +3240,10 @@ void menuvolume(int j){
             fflush(stdin);
             convertvolume(a-b,c,i);
             i++;
-            printf("\n\tO que você deseja agora?");
+            printf("\n\tO que vocÃª deseja agora?");
             printf("\n\t0) SAIR");
             printf("\n\t1) CONTINUAR");
-            printf("\n\tOpção: ");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&d);
             fflush(stdin);
             p=(int*)realloc(p,(TAM++)*sizeof(int));
@@ -3271,8 +3271,8 @@ void multiplo(void){
     float a,b;
     int d=0, i=0, aux=0;
         system("cls");
-        printf("\a\n================================================= CONVERSÃO DE UNIDADES ================================================");
-        printf("\n\nCONVERSÃO PADRÃO PARA MÚLTIPLOS:");
+        printf("\a\n================================================= CONVERSÃƒO DE UNIDADES ================================================");
+        printf("\n\nCONVERSÃƒO PADRÃƒO PARA MÃšLTIPLOS:");
         printf("\n\n\tEscolha unidades desejadas: \n");
         printf("\n\t12) Tera\t");
         printf("\n\t9) Giga\t");
@@ -3288,7 +3288,7 @@ void multiplo(void){
 	    printf("\n\n\tVALOR: ");
         scanf("%f",&a);
         fflush(stdin);
-        printf("\tMúltiplo: ");
+        printf("\tMÃºltiplo: ");
         scanf("%f",&b);
         fflush(stdin);
     if(b>0){
@@ -3298,8 +3298,8 @@ void multiplo(void){
         do{
             printf("\n\tDeseja salvar?");
             printf("\n\t1) Sim");
-            printf("\n\t2) Não");
-            printf("\n\tOpção: ");
+            printf("\n\t2) NÃ£o");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&aux);
             fflush(stdin);
         }while (aux>2 || aux<1);
@@ -3315,8 +3315,8 @@ void multiplo(void){
         do{
             printf("\n\tDeseja salvar?");
             printf("\n\t1) Sim");
-            printf("\n\t2) Não");
-            printf("\n\tOpção: ");
+            printf("\n\t2) NÃ£o");
+            printf("\n\tOpÃ§Ã£o: ");
             scanf("%d",&aux);
             fflush(stdin);
         }while (aux>2 || aux<1);
@@ -3326,10 +3326,10 @@ void multiplo(void){
         p=(int*)realloc(p,(TAM++)*sizeof(int));
     }
 
-    printf("\n\tO que você deseja agora?");
+    printf("\n\tO que vocÃª deseja agora?");
     printf("\n\t0) SAIR");
     printf("\n\t1) CONTINUAR");
-    printf("\n\tOpção: ");
+    printf("\n\tOpÃ§Ã£o: ");
     scanf("%d",&d);
     fflush(stdin);
 
